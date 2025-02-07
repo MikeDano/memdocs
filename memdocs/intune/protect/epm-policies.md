@@ -182,6 +182,10 @@ A device must have an elevation settings policy that enables support for EPM bef
      - **Require user confirmation**: The user receives a simple prompt to confirm their intent to run the file. You can also require more prompts that are available from the *Validation* drop down:
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
+         > [!NOTE]
+         > Windows Hello will only appear for users if you have configured the passwordless experience. For more information, see [Windows passwordless experience]
+(https://learn.microsoft.com/en-us/windows/security/identity-protection/passwordless-experience/).
+         >If the password experience is still available on the device, Windows will default to username/password if Windows authentication is selected.
 
    - **Send elevation data for reporting**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
    - **Reporting scope**: Choose what type of information a device reports to Intune:
